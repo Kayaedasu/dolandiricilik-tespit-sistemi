@@ -1,0 +1,243 @@
+body{
+    font-family: Arial;
+    margin:0;
+    padding:0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height:100vh;
+    color:white;
+}
+
+.ust-bar{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.ust-bar h1{
+    margin:0;
+    font-size:38px;
+}
+
+.ust-bar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.container{
+    padding:40px;
+}
+
+.kartlar{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.kart{
+    flex:1;
+    min-width:220px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+    transition:0.3s;
+    border-left:8px solid #3b82f6;
+}
+
+.kart:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.kart h2{
+    margin:0;
+    font-size:50px;
+}
+
+.kart p{
+    color:#cbd5e1;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.menu{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.menu a,
+.buton{
+    text-decoration:none;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color:white;
+    padding:15px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+    border:none;
+    cursor:pointer;
+}
+
+.menu a:hover,
+.buton:hover{
+    transform:translateY(-3px);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.grafik-alani{
+    margin-top:50px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+    width:700px;
+    max-width:100%;
+}
+
+.grafik-alani h2{
+    margin-top:0;
+    color:#e5e7eb;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+}
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:18px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.05);
+}
+
+input,
+select{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border:none;
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+form{
+    background: rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.3);
+}
+
+.normal{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+.supheli{
+    color:#f59e0b;
+    font-weight:bold;
+}
+
+.engellendi{
+    color:#ef4444;
+    font-weight:bold;
+}
+.alt-butonlar{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.alt-butonlar .buton{
+    display:inline-block;
+}
+.alt-butonlar{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.alt-butonlar .buton{
+    display:inline-block;
+}
+select option{
+    background:#1e293b;
+    color:white;
+}
+.login-sayfasi{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+}
+
+.login-kutu{
+    width:420px;
+    max-width:100%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0px 10px 30px rgba(0,0,0,0.35);
+    text-align:center;
+}
+
+.login-kutu h1{
+    margin-top:0;
+    font-size:32px;
+}
+
+.login-kutu p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.login-form{
+    background:transparent;
+    box-shadow:none;
+    padding:0;
+}
+
+.login-form input{
+    box-sizing:border-box;
+}
+
+.login-form .buton{
+    width:100%;
+    margin-top:10px;
+}
+
+.hata-mesaji{
+    background:rgba(239,68,68,0.15);
+    color:#fecaca;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:20px;
+}

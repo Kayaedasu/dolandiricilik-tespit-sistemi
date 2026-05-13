@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="login-sayfasi">
+
+        <div class="login-kutu">
+
+            <h1>Dolandırıcılık Tespit Sistemi</h1>
+            <p>Yönetim paneline erişmek için giriş yapınız.</p>
+
+            {% if hata %}
+                <div class="hata-mesaji">
+                    {{ hata }}
+                </div>
+            {% endif %}
+
+            <form method="POST" class="login-form">
+
+                <input type="text"
+                       name="kullanici_adi"
+                       placeholder="Kullanıcı adı"
+                       required>
+
+                <input type="password"
+                       name="sifre"
+                       placeholder="Şifre"
+                       required>
+
+                <button type="submit" class="buton">
+                    Giriş Yap
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

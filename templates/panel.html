@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<link rel="stylesheet" href="/static/style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Yönetim Paneli</title>
+
+   
+</head>
+
+<body>
+
+    <div class="ust-bar">
+        <h1>Dolandırıcılık Tespit Sistemi</h1>
+        <a href="/cikis">Çıkış Yap</a>
+    </div>
+
+    <div class="container">
+
+        <div class="kartlar">
+
+            <div class="kart" style="border-left-color:#60a5fa;">
+                <h2>{{ toplam }}</h2>
+                <p>Toplam İşlem</p>
+            </div>
+
+            <div class="kart" style="border-left-color:#22c55e;">
+                <h2>{{ normal }}</h2>
+                <p>Normal İşlem</p>
+            </div>
+
+            <div class="kart" style="border-left-color:#f59e0b;">
+                <h2>{{ supheli }}</h2>
+                <p>Şüpheli İşlem</p>
+            </div>
+
+            <div class="kart" style="border-left-color:#ef4444;">
+                <h2>{{ engellendi }}</h2>
+                <p>Engellenen İşlem</p>
+            </div>
+             <div class="kart" style="border-left-color:#a855f7;">
+        <h2>{{ toplam_risk }}</h2>
+        <p>Toplam Risk Skoru</p>
+    </div>
+
+        </div>
+
+       <div class="menu">
+
+    {% if session["rol"] == "Admin" %}
+        <a href="/islem-ekle">Yeni İşlem Ekle</a>
+    {% endif %}
+
+    <a href="/islemler">İşlemleri Gör</a>
+
+    {% if session["rol"] == "Admin" %}
+        <a href="/alarm-kayitlari">Alarm Kayıtları</a>
+    {% endif %}
+
+</div>
+        <div class="grafik-alani">
+            <h2>İşlem Durum Dağılımı</h2>
+            <canvas id="grafik"></canvas>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('grafik');
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Normal', 'Şüpheli', 'Engellendi'],
+                datasets: [{
+                    data: [
+                        Number("{{ normal }}"),
+                        Number("{{ supheli }}"),
+                        Number("{{ engellendi }}")
+                    ],
+                    backgroundColor: [
+                        '#22c55e',
+                        '#f59e0b',
+                        '#ef4444'
+                    ]
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

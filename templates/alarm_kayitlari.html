@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<link rel="stylesheet" href="/static/style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Alarm Kayıtları</title>
+
+ 
+
+</head>
+
+<body>
+
+    <div class="ust-bar">
+
+        <h1>Alarm Kayıtları</h1>
+
+        <a href="/panel">
+            Panele Dön
+        </a>
+
+    </div>
+
+    <div class="container">
+
+        <table>
+
+            <tr>
+                <th>Alarm ID</th>
+                <th>İşlem ID</th>
+                <th>Müşteri</th>
+                <th>Durum</th>
+                <th>Risk Skoru</th>
+                <th>Alarm Mesajı</th>
+                <th>Tarih</th>
+            </tr>
+
+            {% for alarm in alarmlar %}
+
+            <tr>
+
+                <td>{{ alarm[0] }}</td>
+
+                <td>{{ alarm[1] }}</td>
+
+                <td>{{ alarm[5] }}</td>
+
+                <td>{{ alarm[6] }}</td>
+
+                <td class="risk">
+                    {{ alarm[3] }}
+                </td>
+
+                <td>{{ alarm[2] }}</td>
+
+                <td>{{ alarm[4] }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

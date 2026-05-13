@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<link rel="stylesheet" href="/static/style.css">   
+<head>
+    <meta charset="UTF-8">
+    <title>İşlem Ekle</title>
+
+    
+</head>
+
+<body>
+
+<div class="ust-bar">
+    <h1>Yeni İşlem Ekle</h1>
+    <a href="/panel">Panele Dön</a>
+</div>
+
+<div class="container">
+
+    <form method="POST">
+
+        <label>Müşteri Adı</label>
+        <input type="text" name="musteri_adi" required>
+
+        <label>İşlem Tutarı</label>
+        <input type="number" name="tutar" required>
+
+        <label>Ödeme Kanalı</label>
+        <select name="kanal" required>
+            <option value="Mobil Para">Mobil Para</option>
+            <option value="Web Ödeme">Web Ödeme</option>
+            <option value="Nakit">Nakit</option>
+        </select>
+
+        <label>Ödeme Onaylı mı?</label>
+        <select name="odeme_onayli" required>
+            <option value="Evet">Evet</option>
+            <option value="Hayır">Hayır</option>
+        </select>
+
+        <label>Erişim Tipi</label>
+        <select name="erisim_tipi" required>
+            <option value="Normal">Normal</option>
+            <option value="Şüpheli">Şüpheli</option>
+            <option value="Bypass">Bypass</option>
+        </select>
+
+   
+   <div class="alt-butonlar">
+
+    <button type="submit" class="buton">
+        İşlemi Kaydet
+    </button>
+
+    <a href="/panel" class="buton">
+        Panele Dön
+    </a>
+ </form>
+
+</div>
+
+</div>
+
+</body>
+</html>

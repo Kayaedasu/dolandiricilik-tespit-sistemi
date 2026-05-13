@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<link rel="stylesheet" href="/static/style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>İşlem Listesi</title>
+
+    
+</head>
+
+<body>
+
+<div class="ust-bar">
+    <h1>İşlem Geçmişi</h1>
+    <a href="/panel">Panele Dön</a>
+</div>
+
+<div class="container">
+    <form method="GET" action="/islemler" style="margin-bottom:20px;">
+
+    <select name="durum" style="padding:10px;">
+
+        <option value="Tümü">Tüm İşlemler</option>
+
+        <option value="Normal">Normal</option>
+
+        <option value="Şüpheli">Şüpheli</option>
+
+        <option value="Engellendi">Engellendi</option>
+
+    </select>
+
+    <button type="submit"
+            style="padding:10px; background:#007bff; color:white; border:none;">
+        Filtrele
+    </button>
+
+</form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Müşteri</th>
+            <th>Tutar</th>
+            <th>Kanal</th>
+            <th>Ödeme</th>
+            <th>Erişim</th>
+            <th>Durum</th>
+            <th>Risk Seviyesi</th>
+            <th>Risk Skoru</th>
+            <th>Açıklama</th>
+            <th>Tarih</th>
+        </tr>
+
+        {% for islem in islemler %}
+        <tr>
+            <td>{{ islem[0] }}</td>
+            <td>{{ islem[1] }}</td>
+            <td>{{ islem[2] }} TL</td>
+            <td>{{ islem[3] }}</td>
+            <td>{{ islem[4] }}</td>
+            <td>{{ islem[5] }}</td>
+
+            <td>
+                {% if islem[6] == "Normal" %}
+                    <span class="normal">{{ islem[6] }}</span>
+                {% elif islem[6] == "Şüpheli" %}
+                    <span class="supheli">{{ islem[6] }}</span>
+                {% else %}
+                    <span class="engellendi">{{ islem[6] }}</span>
+                {% endif %}
+            </td>
+
+            <td>{{ islem[7] }}</td>
+            <td>{{ islem[8] }}</td>
+            <td>{{ islem[9] }}</td>
+            <td>{{ islem[10] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="alt-butonlar">
+
+    {% if session["rol"] == "Admin" %}
+
+        <a class="buton" href="/islem-ekle">Yeni İşlem Ekle</a>
+        <a class="buton" href="/alarm-kayitlari">Alarm Kayıtları</a>
+        <a class="buton" href="/rapor-indir">CSV Rapor İndir</a>
+
+    {% endif %}
+
+</div>
+</div>
+
+</body>
+</html>

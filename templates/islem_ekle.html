@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
-<link rel="stylesheet" href="/static/style.css">   
+
 <head>
     <meta charset="UTF-8">
     <title>İşlem Ekle</title>
-
-    
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
@@ -38,26 +37,19 @@
             <option value="Hayır">Hayır</option>
         </select>
 
-        <label>Erişim Tipi</label>
+        <label>Sistem Erişim Durumu</label>
         <select name="erisim_tipi" required>
-            <option value="Normal">Normal</option>
-            <option value="Şüpheli">Şüpheli</option>
-            <option value="Bypass">Bypass</option>
+            <option value="Normal">Normal Erişim</option>
+            <option value="Şüpheli">Şüpheli IP / Olağandışı Erişim</option>
+            <option value="Bypass">Yetkisiz Bypass Denemesi</option>
         </select>
 
-   
-   <div class="alt-butonlar">
+        <div class="alt-butonlar">
+            <button type="submit" class="buton">İşlemi Kaydet</button>
+            <a href="/panel" class="buton">Panele Dön</a>
+        </div>
 
-    <button type="submit" class="buton">
-        İşlemi Kaydet
-    </button>
-
-    <a href="/panel" class="buton">
-        Panele Dön
-    </a>
- </form>
-
-</div>
+    </form>
 
 </div>
 

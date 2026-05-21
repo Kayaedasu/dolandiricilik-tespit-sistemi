@@ -1,0 +1,64 @@
+digraph FraudSystem {
+
+rankdir=TB;
+
+node[
+shape=box
+style="rounded,filled"
+fillcolor="#1e293b"
+color="#60a5fa"
+fontcolor="white"
+fontsize=14
+];
+
+Baslangic[label="Başlangıç"];
+
+Giris[
+label="Kullanıcı Girişi
+(Admin / Denetçi)"
+];
+
+Panel[
+label="Dashboard"
+];
+
+Islem[
+label="Yeni İşlem Ekle"
+];
+
+Risk[
+label="Risk Analizi"
+];
+
+Sonuc[
+label="Normal / Şüpheli / Engellendi"
+];
+
+Alarm[
+label="Alarm Oluştur"
+];
+
+CSV[
+label="CSV Rapor"
+];
+
+Cikis[
+label="Çıkış"
+];
+
+Baslangic -> Giris;
+Giris -> Panel;
+
+Panel -> Islem;
+
+Islem -> Risk;
+
+Risk -> Sonuc;
+
+Sonuc -> Alarm;
+
+Alarm -> CSV;
+
+CSV -> Cikis;
+
+}

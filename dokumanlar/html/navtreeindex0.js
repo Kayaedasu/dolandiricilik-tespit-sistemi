@@ -1,0 +1,26 @@
+var NAVTREEINDEX0 =
+{
+"app_8py.html":[1,0,0],
+"files.html":[1,0],
+"index.html":[],
+"namespaceapp.html":[0,0,0],
+"namespaceapp.html#a58fd555c920d615644a2a85d815dd64c":[0,0,0,0],
+"namespaceapp.html#a5cec96544a6add318418092623544242":[0,0,0,2],
+"namespaceapp.html#a675b4ea702c13dc4b8c05f985a25b496":[0,0,0,8],
+"namespaceapp.html#a6caf24516e243add9d7b93fb59419450":[0,0,0,4],
+"namespaceapp.html#a7331343571ec788014a76887c3f3b1c5":[0,0,0,7],
+"namespaceapp.html#a739a9f1b14179a27f4fa53c5f918401b":[0,0,0,1],
+"namespaceapp.html#aa6aff8c81cb7f3d8765c40f2cdf1bb3c":[0,0,0,5],
+"namespaceapp.html#ab4a362027d4aa3246e0e0f57ebf177b0":[0,0,0,9],
+"namespaceapp.html#ac6ab05806f727cedac46ff36854d4b5a":[0,0,0,3],
+"namespaceapp.html#adb358edd47e8a62e52541bda154b3e73":[0,0,0,6],
+"namespaceapp.html#adca7658ff5c9024a5353574d2c01cbd2":[0,0,0,10],
+"namespacemembers.html":[0,1,0],
+"namespacemembers_func.html":[0,1,1],
+"namespacemembers_vars.html":[0,1,2],
+"namespaces.html":[0,0],
+"namespaceveritabani.html":[0,0,1],
+"namespaceveritabani.html#ab85a2663bbbadba14ba288f481d1e9ac":[0,0,1,0],
+"pages.html":[],
+"veritabani_8py.html":[1,0,1]
+};
